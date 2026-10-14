@@ -130,7 +130,7 @@ export function captureSnapshot(w: Walker, appState?: AppState): Snapshot {
   const connectionType: ConnectionType = rand() < 0.08 ? 'WIFI' : 'CELLULAR'
   const lte = generation !== '3G'
   const rssi = round(rsrpRaw + between(20, 28))
-  const rssnr = lte ? round(clamp(28 - (-rsrpRaw - 70) * 0.55 + between(-4, 4), -10, 30), 1) : null
+  const rssnr = lte ? Math.round(clamp(28 - (-rsrpRaw - 70) * 0.55 + between(-4, 4), -10, 30)) : null
 
   return {
     sessionId: w.sessionId,
