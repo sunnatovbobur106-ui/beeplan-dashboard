@@ -2,7 +2,7 @@
 // cell of its operator. Signal depends on distance to the cell; test results depend on signal.
 import type {
   AppState, CellularInfo, CollectionSettings, ConnectionType, NetworkGeneration,
-  SkipReason, Snapshot,
+  SkipReason, Snapshot, TestResult,
 } from './types'
 
 function mulberry32(seed: number) {
